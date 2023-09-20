@@ -18,11 +18,9 @@ public class DependencyInjectionExampleApplication {
 //		getBean - name parametr musi zacinat malym pismenem, neni to primo nazev tridy
 		MyController myController = (MyController) ctx.getBean("myController");
 
-		String greeting = myController.sayHello();
-
 		StringBuilder strb = new StringBuilder();
 		strb.append(">>> returned value: ");
-		strb.append(greeting);
+		strb.append(myController.sayHello());
 
 		System.out.println(strb);
 
