@@ -1,6 +1,6 @@
 package cz.vojtechkubat.sfgdi.controllers;
 
-import cz.vojtechkubat.sfgdi.serivces.GreetingService;
+import cz.vojtechkubat.pets.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
