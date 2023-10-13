@@ -1,4 +1,4 @@
-package cz.vojtechkubat.pets;
+package cz.vojtechkubat.sfgdi.serivces;
 
 public interface GreetingService {
 

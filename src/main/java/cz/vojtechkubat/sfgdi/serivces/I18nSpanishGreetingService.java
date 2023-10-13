@@ -1,7 +1,4 @@
-package cz.vojtechkubat.pets;
-
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Service;
+package cz.vojtechkubat.sfgdi.serivces;
 
 //@Profile("ES")
 //@Service("i18nService")

@@ -1,6 +1,6 @@
 package cz.vojtechkubat.sfgdi.controllers;
 
-import cz.vojtechkubat.pets.GreetingService;
+import cz.vojtechkubat.sfgdi.serivces.GreetingService;
 import org.springframework.stereotype.Controller;
 
 @Controller
