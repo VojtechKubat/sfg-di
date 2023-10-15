@@ -11,11 +11,9 @@ import cz.vojtechkubat.sfgdi.serivces.ConstructorGreetingSerivce;
 import cz.vojtechkubat.sfgdi.serivces.PrimaryGreetingService;
 import cz.vojtechkubat.sfgdi.serivces.PropertyInjectedGreetingService;
 import cz.vojtechkubat.sfgdi.serivces.SetterInjectedGreetingService;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.*;
 
+@ImportResource("classpath:sfgdi-config.xml")
 @Configuration
 public class GreetingServiceConfig {
 
@@ -59,10 +57,10 @@ public class GreetingServiceConfig {
         return new I18nSpanishGreetingService();
     }
 
-    @Bean
-    ConstructorGreetingSerivce constructorGreetingSerivce() {
-        return new ConstructorGreetingSerivce();
-    }
+//    @Bean
+//    ConstructorGreetingSerivce constructorGreetingSerivce() {
+//        return new ConstructorGreetingSerivce();
+//    }
 
     @Bean
     PropertyInjectedGreetingService propertyInjectedGreetingService() {
