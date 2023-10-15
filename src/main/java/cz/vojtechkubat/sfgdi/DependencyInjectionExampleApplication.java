@@ -1,6 +1,8 @@
 package cz.vojtechkubat.sfgdi;
 
 import cz.vojtechkubat.sfgdi.controllers.*;
+import cz.vojtechkubat.sfgdi.serivces.PrototypeBean;
+import cz.vojtechkubat.sfgdi.serivces.SingletonBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -50,6 +52,17 @@ public class DependencyInjectionExampleApplication {
 		PetController petController = (PetController) ctx.getBean("petController");
 		System.out.println(petController.saySomething());
 
+		SingletonBean singletonBean1 = (SingletonBean) ctx.getBean("singletonBean");
+		SingletonBean singletonBean2 = (SingletonBean) ctx.getBean("singletonBean");
+
+		System.out.println("singletonBean1 get my scope: " + singletonBean1.getMyScope());
+		System.out.println("singletonBean2 get my scope: " + singletonBean2.getMyScope());
+
+		PrototypeBean prototypeBean1 = (PrototypeBean) ctx.getBean("prototypeBean");
+		PrototypeBean prototypeBean2 = (PrototypeBean) ctx.getBean("prototypeBean");
+
+		System.out.println("prototypeBean1 get my scope: " + prototypeBean1.getMyScope());
+		System.out.println("prototypeBean2 get my scope: " + prototypeBean2.getMyScope());
 	}
 
 }
