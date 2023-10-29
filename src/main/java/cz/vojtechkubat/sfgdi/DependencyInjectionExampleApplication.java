@@ -1,6 +1,7 @@
 package cz.vojtechkubat.sfgdi;
 
 import cz.vojtechkubat.sfgdi.controllers.*;
+import cz.vojtechkubat.sfgdi.datasource.FakeDataSource;
 import cz.vojtechkubat.sfgdi.serivces.PrototypeBean;
 import cz.vojtechkubat.sfgdi.serivces.SingletonBean;
 import org.springframework.boot.SpringApplication;
@@ -63,6 +64,9 @@ public class DependencyInjectionExampleApplication {
 
 		System.out.println("prototypeBean1 get my scope: " + prototypeBean1.getMyScope());
 		System.out.println("prototypeBean2 get my scope: " + prototypeBean2.getMyScope());
+
+		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+		fakeDataSource.printAll();
 	}
 
 }
